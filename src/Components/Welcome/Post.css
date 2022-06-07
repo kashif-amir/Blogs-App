@@ -1,0 +1,185 @@
+.welcome-wrpper {
+  background-color: rgb(233, 233, 233);
+  padding: 0.5rem 0 2rem;
+  position: relative;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.posts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 50px;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: row;
+  width: 450px;
+  max-height: 250px;
+  min-height: 250px;
+}
+
+.post-column2 {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+  row-gap: 15px;
+  position: relative;
+}
+
+.post-body {
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-transform: capitalize;
+  min-height: 40px;
+  max-height: 40px;
+  margin: 0;
+}
+
+.post-title {
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  overflow: hidden;
+  min-height: 20px;
+  max-height: 20px;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+img {
+  height: 100%;
+  width: 225px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.read-more-button {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid;
+  width: 90px;
+  margin: 0 auto;
+}
+
+.signout-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 18px;
+  background-image: var(--gradient);
+  color: white;
+  padding: 7px 30px;
+  border: none;
+  box-shadow: 2px 4px 2px grey;
+  margin: 10px;
+}
+
+.div-pencil-icon {
+  position: relative;
+}
+
+.pencil-icon {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding-right: 20px;
+  padding-bottom: 40px;
+}
+
+.create-post-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 20px;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background-color: white;
+  height: 310px;
+  width: 500px;
+  margin-top: 100px;
+  border: 1px solid wheat;
+  padding-left: 35px;
+}
+
+.Post-heading {
+  padding: 0px;
+  text-align: center;
+}
+
+.input-post-title {
+  width: 420px;
+  height: 60px;
+  margin-bottom: 10px;
+  padding: 5px 5px;
+}
+.input-post-body {
+  width: 420px;
+  height: 60px;
+  padding: 5px 5px;
+}
+
+.button-wrapper {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.create-button {
+  border: none;
+  outline: none;
+  background-image: var(--gradient);
+  padding: 5px 15px;
+  color: white;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.wrapper-delete-icon {
+  display: none;
+}
+
+.delete-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 30px;
+  width: 30px;
+}
+
+.post-column2:hover .wrapper-delete-icon {
+  display: unset;
+  position: absolute;
+  inset: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+}

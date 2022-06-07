@@ -1,0 +1,124 @@
+.back-arrow {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+.post-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.show-post-img {
+  height: 350px;
+  width: 830px;
+  object-fit: cover;
+  object-position: center;
+}
+.post-text {
+  width: 65%;
+  margin: 0 auto;
+  text-transform: capitalize;
+}
+
+.post-images {
+  display: flex;
+  flex-direction: row;
+  column-gap: 25px;
+  margin-bottom: 30px;
+}
+.show-img {
+  height: 260px;
+  width: 280px;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 25px;
+}
+.post-image-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid wheat;
+  padding: 20px;
+}
+.post-body-text {
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  overflow: hidden;
+  text-transform: capitalize;
+  min-height: 40px;
+  max-height: 40px;
+}
+.post-title-text {
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  overflow: hidden;
+  min-height: 20px;
+  max-height: 20px;
+  text-transform: capitalize;
+  margin: 0;
+}
+.related-read-more-button {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid green;
+}
+.related-post-text {
+  text-align: left;
+}
+.related-post {
+  width: 65%;
+  margin: 0 auto;
+}
+.comments {
+  text-align: start;
+}
+
+.comment-person-name {
+  margin-bottom: 3px;
+}
+
+.comment-container {
+  width: 65%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.commet-email-wraper {
+  display: flex;
+  align-items: center;
+}
+
+.comment-person-body {
+  margin-left: 60px;
+  text-transform: capitalize;
+}
+.comment-person-email {
+  margin-left: 15px;
+  color: grey;
+  font-size: small;
+  margin-top: 15px;
+}
+
+.email-title {
+  margin-top: 15px;
+  margin-right: 28px;
+  border: 1px solid black;
+  border-radius: 50px;
+  padding: 5px 10px;
+  max-height: 30px;
+  min-height: 20px;
+  max-width: 15px;
+  min-width: 10px;
+  text-align: center;
+  background-color: maroon;
+  color: white;
+  font-weight: bolder;
+}
