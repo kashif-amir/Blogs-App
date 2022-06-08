@@ -55,8 +55,6 @@ const WelcomePage = () => {
     contextValue.setPosts(update);
   };
 
-  console.log("Welcome screen", contextValue.recentPost);
-
   const navigate = useNavigate();
 
   const handleSignOut = () => {

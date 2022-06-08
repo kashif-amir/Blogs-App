@@ -23,7 +23,6 @@ function EditPost(props) {
     props.closeModal();
   };
 
-  console.log(contextValue.posts);
   return (
     <div className="create-post">
       <div>
