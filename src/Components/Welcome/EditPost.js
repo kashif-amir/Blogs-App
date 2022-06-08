@@ -1,27 +1,29 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
+import { useState } from "react";
 import { UserContext } from "../../App";
-import "./Post.css";
 
-function CreatePost(props) {
-  const [postTitle, setPostTitle] = useState();
-  const [postBody, setPostBody] = useState();
+function EditPost(props) {
+  const { title, body, id: postID } = props;
+
+  const [postTitle, setPostTitle] = useState(title);
+  const [postBody, setPostBody] = useState(body);
   const contextValue = useContext(UserContext);
 
-  const savepost = () => {
-    contextValue.setPosts([
-      ...contextValue.posts,
-      {
-        userId: "2",
-        id: contextValue.posts.length + 1,
-        title: postTitle,
-        body: postBody,
-        image:
-          "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
-      },
-    ]);
+  const allPosts = contextValue.posts;
+
+  const savePost = () => {
+    allPosts.forEach((post) => {
+      if (post.id === postID) {
+        post.title = postTitle;
+        post.body = postBody;
+      }
+    });
+
+    contextValue.setPosts([...allPosts]);
     props.closeModal();
   };
 
+  console.log(contextValue.posts);
   return (
     <div className="create-post">
       <div>
@@ -47,7 +49,7 @@ function CreatePost(props) {
         />
       </div>
       <div className="button-wrapper">
-        <button className="create-button" onClick={savepost}>
+        <button className="create-button" onClick={savePost}>
           Create
         </button>
       </div>
@@ -55,4 +57,4 @@ function CreatePost(props) {
   );
 }
 
-export default CreatePost;
+export default EditPost;

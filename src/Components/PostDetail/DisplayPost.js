@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { UserContext } from "../../App";
 import { BiArrowBack } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
@@ -9,6 +9,10 @@ import Comment from "./Comment";
 function DisplayPost() {
   const navigate = useNavigate();
   const contextValue = useContext(UserContext);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>

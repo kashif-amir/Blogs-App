@@ -28,7 +28,6 @@ const WelcomePage = () => {
     });
     contextValue.setRecentPost(recentPost);
   };
-  console.log(contextValue.recentPost);
 
   useEffect(() => {
     axios({
@@ -43,7 +42,7 @@ const WelcomePage = () => {
         Authorization:
           "563492ad6f91700001000001ebd32398cc694c93ad2427105681edca",
       },
-      url: "https://api.pexels.com/v1/search?query=gym",
+      url: "https://api.pexels.com/v1/search?query=mountains",
     }).then(function (response) {
       contextValue.setImages(response.data.photos);
     });
@@ -51,12 +50,12 @@ const WelcomePage = () => {
 
   const deleteItem = (id) => {
     const update = contextValue.posts.filter(({ id: postID }, index) => {
-      console.log(id);
       return id !== postID;
     });
-    console.log(update);
     contextValue.setPosts(update);
   };
+
+  console.log("Welcome screen", contextValue.recentPost);
 
   const navigate = useNavigate();
 

@@ -11,8 +11,6 @@ function Comment({ postId }) {
       });
   }, []);
 
-  console.log("commrnts", comments);
-
   return (
     <div>
       {comments.map((comment) => {
